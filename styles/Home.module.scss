@@ -1,10 +1,16 @@
+@mixin center() {
+  justify-content: center;
+  align-items: center;
+}
+
+$blue: #0070f3;
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include center();
   height: 100vh;
 }
 
@@ -24,30 +30,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
 }
 
 .title {
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  a {
+    color: $blue;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+  }
 }
 
 .title,
@@ -93,8 +96,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: $blue;
+  border-color: $blue;
 }
 
 .card h2 {

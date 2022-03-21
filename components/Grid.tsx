@@ -1,5 +1,5 @@
 import React from "react";
-import DynamicComponent from "../components/DynamicComponent";
+import DynamicComponent from "./DynamicComponent";
 import { sbEditable } from "@storyblok/storyblok-editable";
 
 const Grid = ({ blok }) => {

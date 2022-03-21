@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import StoryblokClient from "storyblok-js-client";
 
 const Storyblok = new StoryblokClient({
-  accessToken: "your-preview-token",
+  accessToken: "lY7PXUZtIZ6ABd1u6RiHDQtt",
   cache: {
     clear: "auto",
     type: "memory",
@@ -21,9 +21,7 @@ export function useStoryblok(originalStory, preview) {
       const storyblokInstance = new StoryblokBridge();
 
       // reload on Next.js page on save or publish event in the Visual Editor
-      storyblokInstance.on(["change", "published"], () =>
-        location.reload(true)
-      );
+      storyblokInstance.on(["change", "published"], () => location.reload());
 
       // live update the story on input events
       storyblokInstance.on("input", (event) => {
